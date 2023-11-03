@@ -50,6 +50,18 @@ function App() {
           </button>
         ))}
       </div>
+
+      <div>
+        {pages.map((item, index) => (
+          <button
+            className={`join-item btn ${page === index ? "btn-active" : ""}`}
+            key={index}
+            onClick={() => setPage(index)}
+          >
+            {index + 1}
+          </button>
+        ))}
+      </div>
     </>
   );
 }
